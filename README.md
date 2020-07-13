@@ -10,7 +10,6 @@ cd /cucumber-js
 ```
 
 ## Pre-requistes
-!! Please skip the pre-requisites in case you have already Node and Java Installed
 
 1) Download and Install -> Node.js (https://nodejs.org/en/download/)
 2) Download and Install -> Java  (https://www.java.com/en/download/)
@@ -30,12 +29,9 @@ Please make sure that you are in the git repository folder before executing this
 npm install
 ```
 
-
 ## Usage
 To execute the tests you will need to run the following command.
 
 ```bash
 npm run test
 ```
-
-## Thanks Docler for this test:) 

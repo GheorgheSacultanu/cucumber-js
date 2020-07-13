@@ -1,9 +1,17 @@
 const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
-const { Builder, By, until } = require('selenium-webdriver');
+const { until } = require('selenium-webdriver');
 const { genericPageObjects } = require('../../page-objects/generic-elements.js');
+var seleniumWebdriver = require('selenium-webdriver');
+var chrome    = require('selenium-webdriver/chrome');
 
-let driver = new Builder().forBrowser('chrome').build();
+var options   = new chrome.Options().headless();
+
+var driver = new seleniumWebdriver.Builder()
+  .forBrowser('chrome')
+  .setChromeOptions(options)
+  .build()
+
 
 
   Given('Website URL {string}', async function (String) {
