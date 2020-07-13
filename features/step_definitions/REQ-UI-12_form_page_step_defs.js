@@ -5,9 +5,9 @@ const { formePageObjects } = require('../../page-objects/form-page.js');
 
 
 var seleniumWebdriver = require('selenium-webdriver');
-var chrome    = require('selenium-webdriver/chrome');
+var chrome = require('selenium-webdriver/chrome');
 
-var options   = new chrome.Options().headless();
+var options = new chrome.Options().headless();
 
 var driver = new seleniumWebdriver.Builder()
   .forBrowser('chrome')

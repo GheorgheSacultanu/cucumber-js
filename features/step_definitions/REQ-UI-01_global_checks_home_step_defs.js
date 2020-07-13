@@ -6,9 +6,9 @@ const { genericPageObjects } = require('../../page-objects/generic-elements.js')
 // let driver = new Builder().forBrowser('chrome').build();
 
 var seleniumWebdriver = require('selenium-webdriver');
-var chrome    = require('selenium-webdriver/chrome');
+var chrome = require('selenium-webdriver/chrome');
 
-var options   = new chrome.Options().headless();
+var options = new chrome.Options().headless();
 
 var driver = new seleniumWebdriver.Builder()
   .forBrowser('chrome')
@@ -17,15 +17,15 @@ var driver = new seleniumWebdriver.Builder()
 
 
 
-  Given('Url {string}', async function (String) {
-    await driver.get(String);
-  });
+Given('Url {string}', async function (String) {
+  await driver.get(String);
+});
 
-  When('I check Home site title', async function () {
-  });
+When('I check Home site title', async function () {
+});
 
-  Then('I should see the expected site title on the Home Page', async function () {
-    const actualResult = await driver.getTitle();
-    assert.equal(actualResult, genericPageObjects.titleMessage);
-    driver.close();
-  });
+Then('I should see the expected site title on the Home Page', async function () {
+  const actualResult = await driver.getTitle();
+  assert.equal(actualResult, genericPageObjects.titleMessage);
+  driver.close();
+});
